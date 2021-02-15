@@ -9,8 +9,8 @@
 using namespace std;
 
 #define PI acos(-1)
-//void Test3();
-void Code3_2();
+void Test3();
+void Code3_2();  
 void Code3_9();
 void Code3_11();
 void Code3_12(int);
