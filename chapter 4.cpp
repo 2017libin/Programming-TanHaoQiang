@@ -7,8 +7,12 @@
 #include <vector>
 using namespace std;
 
-
+static int max(int, int);
+int max(int, int, int);
+// 默认参数应该在函数声明给出
+int max3(int, int, int c = 1);
 int main4() {
+	cout << max(-1, -2) << max(1,2,4);
 	return 0;
 }
 
