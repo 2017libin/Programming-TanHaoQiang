@@ -10,12 +10,31 @@ using namespace std;
 void IOFlags();
 void UseStack();
 void UseVector();
-int main() {
+int max(int, int);
+int max(int, int, int);
+int max3(int, int, int);
+
+int main0() {
 	void test4();
 	test4();
 	return 0;
 }
+int max3(int a, int b, int c) {
+	a = (a > b) ? a : b;
+	a = (a > c) ? a : c;
+	return a;
+}
 
+int max(int a, int b) {
+	a = (a > b) ? a : b;
+	return a;
+}
+
+int max(int a, int b, int c) {
+	a = (a > b) ? a : b;
+	a = (a > c) ? a : c;
+	return a;
+}
 void UseFactor() {
 	vector<int> v;
 	v.push_back(1);

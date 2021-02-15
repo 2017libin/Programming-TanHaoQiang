@@ -16,22 +16,7 @@ int main4() {
 	return 0;
 }
 
-int max3(int a, int b, int c) {
-	a = (a > b) ? a : b;
-	a = (a > c) ? a : c;
-	return a;
-}
 
-int max(int a, int b) {
-	a = (a > b) ? a : b;
-	return a;
-}
-
-int max(int a, int b, int c) {
-	a = (a > b) ? a : b;
-	a = (a > c) ? a : c;
-	return a;
-}
 void test4() {
 	cout << "from chapter 4.cpp\n";
 	int a = 1;
