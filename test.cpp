@@ -14,7 +14,7 @@ int max(int, int);
 int max(int, int, int);
 int max3(int, int, int);
 
-int main0() {
+int main00() {
 	void test4();
 	test4();
 	return 0;
@@ -25,7 +25,7 @@ int max3(int a, int b, int c) {
 	return a;
 }
 
-int max(int a, int b) {
+int max(int a, int b) { 
 	a = (a > b) ? a : b;
 	return a;
 }
