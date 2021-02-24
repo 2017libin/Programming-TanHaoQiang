@@ -17,7 +17,7 @@ void Code4_10(int);
 int Code4_11(int);
 void Code4_9(char, char, char, int);  // 汉诺塔问题
 void Code4_12();
-int main() {
+int main4() {
 	for (int i = 8; i < 100; i += 2) {
 		//if (Code4_3(i))
 		   //cout << i << "的阶乘是 ： " << fac(i) << endl;

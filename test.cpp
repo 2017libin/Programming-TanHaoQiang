@@ -13,10 +13,15 @@ void UseVector();
 int max(int, int);
 int max(int, int, int);
 int max3(int, int, int);
-
-int main00() {
-	void test4();
-	test4();
+void Sort(int*, int);
+int main() {
+	//void test4();
+	//test4();
+	int a[] = { 1,3,5,2,6,4 };
+	int size = 6;
+	Sort(a, size);
+	for (int i = 0; i < size; ++i)
+		cout << a[i] << " ";
 	return 0;
 }
 int max3(int a, int b, int c) {
@@ -81,4 +86,12 @@ void UseStack() {
 		cout << stack1.top() << endl;
 		stack1.pop();
 	}
+}
+
+// 冒泡排序
+void Sort(int* a, int n) {
+	for (int i = 0; i < n - 2; ++i) // 0 - n-2 是 n-1趟
+		for (int j = 0; j < n - i-1; ++j) // 0 - n-i-1 是n-i次比较
+			if (a[j] > a[j + 1])
+				swap(a[j], a[j + 1]);
 }
