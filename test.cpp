@@ -1,8 +1,10 @@
+//#pragma warning(disable:4996)
 #include<iostream>
 #include<iomanip>
 #include<cmath>
 #include<stack>
 #include <vector>
+#include <string>
 using namespace std;
 
 #define PI acos(-1)
@@ -14,14 +16,19 @@ int max(int, int);
 int max(int, int, int);
 int max3(int, int, int);
 void Sort(int*, int);
-int main() {
+int main0() {
 	//void test4();
 	//test4();
-	int a[] = { 1,3,5,2,6,4 };
-	int size = 6;
-	Sort(a, size);
-	for (int i = 0; i < size; ++i)
-		cout << a[i] << " ";
+	//int a[] = { 1,3,5,2,6,4 };
+	//int size = 6;
+	//Sort(a, size);
+	//for (int i = 0; i < size; ++i)
+	//	cout << a[i] << " ";
+	char c[] = "hello world!",b[20];
+	cout << c << endl;  // 从第一个字符开始输出，遇到第一个
+	//cin >> c;  // 超出数组c的长度不会报错，而是覆盖后面的内存
+	//strcpy_s(b,c);
+	cout << b;
 	return 0;
 }
 int max3(int a, int b, int c) {
@@ -90,8 +97,8 @@ void UseStack() {
 
 // 冒泡排序
 void Sort(int* a, int n) {
-	for (int i = 0; i < n - 2; ++i) // 0 - n-2 是 n-1趟
-		for (int j = 0; j < n - i-1; ++j) // 0 - n-i-1 是n-i次比较
+	for (int i = 0; i < n - 1; ++i) // 0 - n-2 是 n-1趟
+		for (int j = 0; j < n - i-1; ++j) // 当 i=0 时是第 i+1=1 趟，需要进行 n-(i+1) 次比较
 			if (a[j] > a[j + 1])
 				swap(a[j], a[j + 1]);
 }
