@@ -16,7 +16,7 @@ int max(int, int);
 int max(int, int, int);
 int max3(int, int, int);
 void Sort(int*, int);
-int main0() {
+int main() {
 	//void test4();
 	//test4();
 	//int a[] = { 1,3,5,2,6,4 };
@@ -24,11 +24,15 @@ int main0() {
 	//Sort(a, size);
 	//for (int i = 0; i < size; ++i)
 	//	cout << a[i] << " ";
-	char c[] = "hello world!",b[20];
-	cout << c << endl;  // 从第一个字符开始输出，遇到第一个
+	//char c[] = "hello world!",b[20];
+	//cout << c << endl;  // 从第一个字符开始输出，遇到第一个
 	//cin >> c;  // 超出数组c的长度不会报错，而是覆盖后面的内存
 	//strcpy_s(b,c);
-	cout << b;
+	//cout << b;
+
+	char c;
+	while (cin.get(c))
+		cout.put(c);
 	return 0;
 }
 int max3(int a, int b, int c) {
