@@ -19,8 +19,13 @@ void Code5_6(int);
 void Code5_7(int a[4][5]);
 void Code5_8(int[], int, int);
 void Code5_9(int, int, int);
-
-int main5() {
+void Code5_10();
+void Code5_12();
+void Code5_13_1(char c1[],const char c2[]);
+void Code5_14();
+void Code5_16(char[]);  // 函数重载
+void Code5_16(string);
+int main() {
 	//int a[7] = { 11,1,4,5,55,23 };
 	////Code5_1(100);
 	//Code5_2(a, 6);
@@ -37,7 +42,19 @@ int main5() {
 	//Code5_7(a);
 	//int a[10] = { 12,9,7,6,5,3,-2,-14,-20,-34 };
 	//Code5_8(a, 10, 6);
-	Code5_9(2005, 10, 1);
+	//Code5_9(2005, 10, 1);
+	//Code5_10();
+	//Code5_12();
+	//char ch1[20] = "hello ";
+	//char ch2[20] = "world!";
+	//Code5_13_1(ch1, ch2);
+	//cout << ch1;
+	//Code5_14();
+	char c[20] = "hello world!";
+	string str = "hello world!";
+	Code5_16(c);
+	cout << endl;
+	Code5_16(str);
 	return 0;
 }
 void print_array(int a[], int n) {	
@@ -209,4 +226,83 @@ void Code5_9(int year, int month, int day) {
 		!(year % 4) && (year % 100) || !(year % 400) ? sum_days++ : sum_days;
 	sum_days += day;
 	cout << year << "/" << month << "/" << day << " 是" << year << "年的第" << sum_days << "天。\n";
+}
+
+void Code5_10() {
+	char c;
+	int lowercase, uppercase, space, number, other;
+	lowercase = uppercase = space = number = other = 0;
+	for (int i = 0; i < 3; ++i) {  // 读三行文章
+		while ((c = cin.get()) != '\n')
+			if (c <= 'z' && c >= 'a')
+				lowercase++;
+			else if (c <= 'Z' && c >= 'A')
+				uppercase++;
+			else if (c == ' ')
+				space++;
+			else if (c >= '0' && c <= '9')
+				number++;
+			else
+				other++;
+	}
+	cout << "小写字母个数为：" << lowercase << endl
+		<< "大写字母个数为：" << uppercase << endl
+		<< "空格个数为：" << space << endl
+		<< "数字个数为：" << number << endl
+		<< "其他字符个数为：" << other << endl;
+}
+
+// 将第i个字母变成第(26-i+1)个字符，非字母字符不变
+void Code5_12() {
+	char cipher[80];
+	cin.getline(cipher, 80);
+	for (int i = 0; i < 80 && cipher[i] != '\0'; ++i) {
+		if (cipher[i] >= 'a' && cipher[i] <= 'z')
+			cipher[i] = 'a' + (26 - (cipher[i] - 'a' + 1) + 1) - 1;  // 第i个字符为'a'+i-1
+		else if (cipher[i] >= 'A' && cipher[i] <= 'Z')
+			cipher[i] = 'A' + (26 - (cipher[i] - 'A' + 1) + 1) - 1; 
+		else
+			;
+	}
+	cout << cipher;
+}
+
+void Code5_13_1(char c1[],const char c2[]) {
+	int n1, n2;
+	n1 = n2 = 0;
+	while (c1[n1] != '\0') ++n1;
+	while (c2[n2] != '\0')
+		c1[n1++] = c2[n2++];
+	c1[n1] = '\0';
+}
+
+void Code5_14() {
+	int n;
+	cin >> n;
+	string* strs = new string[n];
+	for (int i = 0; i < n; ++i)
+		cin >> strs[i];
+	for(int i = 0; i < n-1; ++i)
+		for(int j = 0; j < n-i-1; ++j)
+			if (strs[j] > strs[j + 1]) {
+				string tmp = strs[j];
+				strs[j] = strs[j + 1];
+				strs[j + 1] = tmp;
+			}
+	cout << "排序后：\n";
+	for (int i = 0; i < n; ++i)
+		cout << strs[i] << endl;
+}
+
+void Code5_16(char c[]) {
+	int size = 0;
+	while (c[size++]);
+
+	for (int i = size - 1; i >= 0; --i)
+		cout << c[i];
+}
+
+void Code5_16(string str) {
+	for (int i = str.size() - 1; i >= 0; --i)
+		cout << str[i];
 }

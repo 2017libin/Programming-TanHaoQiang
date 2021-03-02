@@ -16,7 +16,7 @@ int max(int, int);
 int max(int, int, int);
 int max3(int, int, int);
 void Sort(int*, int);
-int main() {
+int main0() {
 	//void test4();
 	//test4();
 	//int a[] = { 1,3,5,2,6,4 };
@@ -29,10 +29,14 @@ int main() {
 	//cin >> c;  // 超出数组c的长度不会报错，而是覆盖后面的内存
 	//strcpy_s(b,c);
 	//cout << b;
-
-	char c;
-	while (cin.get(c))
-		cout.put(c);
+	char ch[80];
+	cin.getline(ch, 80, '\n');
+	cout << ch;
+	//cin.getline(ch, 20, '/');
+	//cout << "the second part is：" << ch << endl;
+	//while (cin.peek()!=-1)
+	//	if ((c = cin.get()) != ' ')
+	//		cout << c;
 	return 0;
 }
 int max3(int a, int b, int c) {
