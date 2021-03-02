@@ -25,7 +25,7 @@ void Code5_13_1(char c1[],const char c2[]);
 void Code5_14();
 void Code5_16(char[]);  // КЏЪ§жиди
 void Code5_16(string);
-int main() {
+int main5() {
 	//int a[7] = { 11,1,4,5,55,23 };
 	////Code5_1(100);
 	//Code5_2(a, 6);
