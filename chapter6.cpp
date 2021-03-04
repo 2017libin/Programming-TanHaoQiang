@@ -18,6 +18,7 @@ double fsin(double);
 double fcos(double);
 double fexp(double);
 void Code6_10(int[5][5]);
+void Code6_16(string);
 int main() {
 	//int a[5];
 	//for (int i = 0; i < 5; ++i)
@@ -50,16 +51,18 @@ int main() {
 	//cout << Code6_13(func, 20);
 	//cout << func(0) << endl;
 	//cout << (*func)(0);
-	int a[5][5];
-	for (int i = 0; i < 5; i++)
-		for (int j = 0; j < 5; ++j)
-			cin >> a[i][j];
-	Code6_10(a);
-	for (int i = 0; i < 5; ++i) {
-		for (int j = 0; j < 5; ++j)
-			cout << setw(4) << a[i][j];
-		cout << endl;
-	}
+	//int a[5][5];
+	//for (int i = 0; i < 5; i++)
+	//	for (int j = 0; j < 5; ++j)
+	//		cin >> a[i][j];
+	//Code6_10(a);
+	//for (int i = 0; i < 5; ++i) {
+	//	for (int j = 0; j < 5; ++j)
+	//		cout << setw(4) << a[i][j];
+	//	cout << endl;
+	//}
+	string str = "hh123.!fsa12a1230";
+	Code6_16(str);
 	return 0;
 }
 
@@ -207,4 +210,24 @@ void Code6_10(int a[5][5]) {
 		else
 			swap(a[min_x][min_y], a[4][4]);
 	}
+}
+
+void Code6_16(string str) {
+	int i = 0;
+	int* num = new int[str.size()/2+1];  // 存放数据的数组
+	for (int i = 0; i < str.size() / 2 + 1; ++i)
+		num[i] = 0;
+	int count = 0;  // 记录数字的个数
+	while (str[i]) {
+		if (str[i] >= '0' && str[i] <= '9') {
+			while (str[i] >= '0' && str[i] <= '9')
+				num[count] = 10 * num[count] + str[i++]-'0';
+			count++;
+		}
+		else i++;
+	}
+	cout << "数字的个数为：" << count << endl;
+	for (int i = 0; i < count; ++i)
+		cout << num[i] << " ";
+	delete[]num;
 }
