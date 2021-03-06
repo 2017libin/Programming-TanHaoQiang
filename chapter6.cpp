@@ -19,7 +19,7 @@ double fcos(double);
 double fexp(double);
 void Code6_10(int[5][5]);
 void Code6_16(string);
-int main() {
+int main6() {
 	//int a[5];
 	//for (int i = 0; i < 5; ++i)
 	//	cin >> a[i];
