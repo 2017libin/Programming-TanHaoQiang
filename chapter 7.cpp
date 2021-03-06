@@ -20,7 +20,7 @@ struct Date
 int Code7_2(Date);
 Date* Code7_6();
 void Code7_11();
-int main() {
+int main7() {
 	//Date d = { 2008,10,1 };
 	//int days = Code7_2(d);
 	//cout << days << endl;
