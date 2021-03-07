@@ -34,7 +34,7 @@ void Code10_4();
 void Code10_6();
 void Code10_7();
 
-int main() {
+int main10() {
 	//Code10_3();
 	//Code10_4();
 	//Code10_6();
@@ -82,11 +82,11 @@ void Code10_6() {
 }
 
 void Code10_7() {
-	Teacher t1("1001", "Li", "man", "语文老师"), t2;
+	Teacher_ t1("1001", "Li", "man", "语文老师"), t2;
 	Student1 s1("2001", "Wang", "woman");
 	cout << "student1: \n";
 	s1.display();
-	t2 = Teacher(s1);
+	t2 = Teacher_(s1);
 	cout << "teacher2: \n";
 	t2.display();
 }

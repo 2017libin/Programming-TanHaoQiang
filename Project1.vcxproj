@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="arraymax.cpp" />
     <ClCompile Include="chapter 10.cpp" />
+    <ClCompile Include="chapter 11.cpp" />
     <ClCompile Include="chapter 2.cpp" />
     <ClCompile Include="chapter 3.cpp" />
     <ClCompile Include="chapter 4.cpp" />
@@ -154,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arraymax.h" />
+    <ClInclude Include="chapter11.h" />
     <ClInclude Include="my_class.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

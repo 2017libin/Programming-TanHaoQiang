@@ -160,7 +160,7 @@ private:
 	int data[2][3];
 };
 
-class Teacher;
+class Teacher_;
 class Student1
 {
 public:
@@ -169,19 +169,19 @@ public:
 	//~Student1();
 	void display();
 	//friend Teacher::Teacher(Student&);  // 不起作用
-	friend class Teacher;
+	friend class Teacher_;
 private:
 	string num;
 	string name;
 	string sex;
 };
 
-class Teacher
+class Teacher_
 {
 public:
-	Teacher();
-	Teacher(string n, string na, string s, string t) :num(n), name(na), sex(s), title(t) {}
-	Teacher(Student1&);
+	Teacher_();
+	Teacher_(string n, string na, string s, string t) :num(n), name(na), sex(s), title(t) {}
+	Teacher_(Student1&);
 	//~Teacher();
 	void display();
 private:

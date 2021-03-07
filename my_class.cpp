@@ -157,20 +157,20 @@ void Student1::display() {
 }
 
 // Teacher类的成员函数定义
-Teacher::Teacher() {
+Teacher_::Teacher_() {
 	name = "老王";
 	num = "0000";
 	sex = "man";
 	title = "体育老师";
 }
 
-Teacher::Teacher(Student1& s) {
+Teacher_::Teacher_(Student1& s) {
 	num = s.num;
 	name = s.name;
 	sex = s.sex;
 	title = "体育老师";
 }
 
-void Teacher::display() {
+void Teacher_::display() {
 	cout << num << "  " << name << "  " << sex << "  " << title << endl;
 }
