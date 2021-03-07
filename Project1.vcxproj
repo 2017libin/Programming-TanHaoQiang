@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="arraymax.cpp" />
+    <ClCompile Include="chapter 10.cpp" />
     <ClCompile Include="chapter 2.cpp" />
     <ClCompile Include="chapter 3.cpp" />
     <ClCompile Include="chapter 4.cpp" />

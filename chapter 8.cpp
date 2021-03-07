@@ -51,7 +51,7 @@ void Code8_6() {
 	for (int i = 0; i < 3; ++i)
 		r[i].show_volum();
 }
-int main9() {
+int main8() {
 	Code8_6();
 	return 0;
 }

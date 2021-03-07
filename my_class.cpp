@@ -123,3 +123,54 @@ void Time1::display() {
 }	
 
 
+// Complex类的成员函数定义
+void Complex::display() {
+	if (imag > 0)
+		cout << real << '+' << imag << 'i' << endl;
+	else if (imag < 0)
+		cout << real << imag << 'i' << endl;
+	else
+		cout << endl;
+}
+
+// Matrix23类的成员函数定义
+Matrix23::Matrix23()
+{
+	for (int i = 0; i < 2; ++i)
+		for (int j = 0; j < 3; ++j)
+			data[i][j] = 0;
+}
+
+Matrix23::~Matrix23()
+{
+}
+
+// Student1类的成员函数定义
+Student1::Student1() {
+	name = "老王";
+	num = "0000";
+	sex = "man";
+}
+
+void Student1::display() {
+	cout << num << "  " << name << "  " << sex << endl;
+}
+
+// Teacher类的成员函数定义
+Teacher::Teacher() {
+	name = "老王";
+	num = "0000";
+	sex = "man";
+	title = "体育老师";
+}
+
+Teacher::Teacher(Student1& s) {
+	num = s.num;
+	name = s.name;
+	sex = s.sex;
+	title = "体育老师";
+}
+
+void Teacher::display() {
+	cout << num << "  " << name << "  " << sex << "  " << title << endl;
+}

@@ -129,3 +129,64 @@ template <class numtype>
 numtype Compare<numtype>::min() {
 	return (x < y) ? x : y;
 }
+
+
+class Complex
+{
+public:
+	Complex() { real = imag = 0; }
+	Complex(double r) { real = r; imag = 0; }
+	Complex(int r) { real = r; imag = 0; }  // int转换构造函数
+	Complex(double r, double i):real(r),imag(i){}
+	operator double() { return real; }
+	friend Complex operator + (Complex, Complex);
+	~Complex() {}
+	void display();
+private:
+	double real;
+	double imag;
+};
+
+
+class Matrix23
+{
+public:
+	Matrix23();
+	~Matrix23();
+	friend Matrix23 operator +(Matrix23&, Matrix23&);
+	friend istream& operator >> (istream&, Matrix23&);
+	friend ostream& operator << (ostream&, Matrix23&);
+private:
+	int data[2][3];
+};
+
+class Teacher;
+class Student1
+{
+public:
+	Student1();
+	Student1(string n, string na, string s) :num(n), name(na), sex(s) {}
+	//~Student1();
+	void display();
+	//friend Teacher::Teacher(Student&);  // 不起作用
+	friend class Teacher;
+private:
+	string num;
+	string name;
+	string sex;
+};
+
+class Teacher
+{
+public:
+	Teacher();
+	Teacher(string n, string na, string s, string t) :num(n), name(na), sex(s), title(t) {}
+	Teacher(Student1&);
+	//~Teacher();
+	void display();
+private:
+	string num;
+	string name;
+	string sex;
+	string title;
+};
