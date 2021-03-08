@@ -13,7 +13,7 @@ void Code12_4() {
 	p->printArea();
 }
 		
-int main() {
+int main12() {
 	Code12_4();
 	return 0;
 }

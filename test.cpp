@@ -8,6 +8,7 @@
 using namespace std;
 
 #define PI acos(-1)
+void Code6_4(int* a, int n, int m);
 
 void IOFlags();
 void UseStack();
