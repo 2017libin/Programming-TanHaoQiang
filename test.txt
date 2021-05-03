@@ -1,5 +1,11 @@
 master branch in remote (modify)
 
+<<<<<<< HEAD
 test3 branch in local
 
 test5 test
+=======
+modify test.txt in chapter8 branch of remote
+
+test5
+>>>>>>> 23bb835a8276fd1d090062c6c1f40ef65d9b0309
